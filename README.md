@@ -30,13 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+    Extend the new class component from React's Component, then use the constructor function to call super, define state, and pass in props. Then use the render function to render elements to the DOM.
+
 2. Describe the different phases of the component lifecycle.
+
+    First is the birth/mounting phase. This is when the component initially renders and defines state and initial data. ComponentDidMount is called here. Second is the growing/updating phase. This happens whenever the component rerenders such as when its state or props change. ComponentDidUpdate is called here. Last is the death/unmounting phase. This is when the component is removed from the DOM and any event listeners are cleaned up. ComponentWillUnmount is called here.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+    ComponentDidMount is a function called in the birth/mounting phase of the lifecycle. It is useful for axios requests and adding event listeners. ComponentDidUpdate is called in the growing/updating phase and is useful for checking if state or props have changed and forcing a rerender if they have. ComponentWillUnmount is called in the death/unmounting phase and is useful for cleaning up event listeners and cancelling network requests.
+
 4. Define stateful logic.
 
+    Stateful logic is logic (often a function) that lives in a component and usually deals with state. Common examples are click handlers and change handlers.
+
 5. Describe how to test a React component with React Testing Library.
+
+    First, figure out what you want to test and write your test. Then see if the test passes and update your code as needed. To write a test use queries to select the DOM elements you need, use fireEvent to replicate user interactions like clicks and typing, and use expect and matchers to confirm that what you are testing works as expected.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
